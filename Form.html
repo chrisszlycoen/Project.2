@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form with Validation</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Sample Form</h1>
+<form action="form.php" method="post">
+<label for="username">Username:</label>
+<input type="text" id="username" name="username" required minlength="3" maxlength="15" pattern="[a-zA-Z0-9]+" title="Username must be 3-15 characters long and can only contain letters and numbers.">
+<br><br>
+
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required>
+<br><br>
+
+<label for="password">Password:</label>
+<input type="password" id="password" name="password" required minlength="8" title="Password must be at least 8 characters long.">
+<br><br>
+
+<label for="confirm-password">Confirm Password:</label>
+<input type="password" id="confirm-password" name="confirm-password" required minlength="8" title="Please confirm your password.">
+<br><br>
+<label for="age">Age:</label>
+<input type="number" id="age" name="age" required min="18" max="100">
+<br><br>
+
+<label for="website">Website:
+<input type="url" id="website" name="website" pattern="https?://.+" title="Please include http:// or https:// in your URL">
+<br><br>
+
+<label for="date">Date of Birth:</label>
+<input type="date" id="date" name="date" required>
+<br><br>
+
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
